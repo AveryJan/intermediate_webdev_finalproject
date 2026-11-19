@@ -1,52 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Simple Interest Calculator</title>
 
-    <meta
-        name="description"
-        content="Calculate simple interest and total amounts using our easy-to-use Simple Interest Calculator."
-    >
+    <meta name="description"
+          content="Calculate simple interest and total repayment amounts using this interactive Interest Rate Calculator.">
 
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Favicon -->
+    <link rel="icon"
+          type="image/x-icon"
+          href="favicon.ico">
 
-    <link rel="stylesheet" href="style.css">
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="style.css">
 
+    <!-- JavaScript -->
     <script src="script.js" defer></script>
 </head>
 
 <body>
+
     <h1>Simple Interest Calculator</h1>
 
     <main>
-        <section>
-            <h2>Calculate Simple Interest</h2>
+        <h2>Calculate Your Interest</h2>
 
-            <label for="principal">Principal Amount:</label>
-            <input type="number" id="principal" min="0" step="any">
+        <label for="principal">Principal Amount:</label>
+        <input type="number" id="principal">
 
-            <br><br>
+        <br><br>
 
-            <label for="rate">Annual Interest Rate (%):</label>
-            <input type="number" id="rate" min="0" step="any">
+        <label for="rate">Interest Rate (%):</label>
+        <input type="number" id="rate">
 
-            <br><br>
+        <br><br>
 
-            <label for="time">Time (Years):</label>
-            <input type="number" id="time" min="0" step="any">
+        <label for="time">Time (Years):</label>
+        <input type="number" id="time">
 
-            <br><br>
+        <br><br>
 
-            <button type="button" onclick="calculateInterest()">
-                Calculate Interest
-            </button>
+        <button type="button" onclick="calculateInterest()">
+            Calculate Interest
+        </button>
 
-            <p id="interest"></p>
-            <p id="total"></p>
-        </section>
+        <h2>Results</h2>
+
+        <p id="interest"></p>
+
+        <p id="total"></p>
+
     </main>
+
 </body>
 </html>
