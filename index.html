@@ -3,23 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
+    <!-- SEO Enhancements -->
     <title>Simple Interest Calculator</title>
 
-    <meta name="description"
-          content="Calculate simple interest and total repayment amounts using this interactive Interest Rate Calculator.">
+    <meta
+        name="description"
+        content="Calculate simple interest and total repayment amounts using our easy-to-use Interest Rate Calculator."
+    >
 
     <!-- Favicon -->
-    <link rel="icon"
-          type="image/x-icon"
-          href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-    <!-- CSS -->
-    <link rel="stylesheet"
-          href="style.css">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 
     <!-- JavaScript -->
     <script src="script.js" defer></script>
@@ -27,37 +25,91 @@
 
 <body>
 
-    <h1>Simple Interest Calculator</h1>
+    <header>
+        <h1>Simple Interest Calculator</h1>
+        <p>Calculate your simple interest quickly and accurately.</p>
+    </header>
 
     <main>
-        <h2>Calculate Your Interest</h2>
+        <section aria-labelledby="calculator-heading">
 
-        <label for="principal">Principal Amount:</label>
-        <input type="number" id="principal">
+            <h2 id="calculator-heading">Interest Rate Calculator</h2>
 
-        <br><br>
+            <form id="interest-form">
 
-        <label for="rate">Interest Rate (%):</label>
-        <input type="number" id="rate">
+                <div>
+                    <label for="principal">Principal Amount ($):</label>
+                    <input
+                        type="number"
+                        id="principal"
+                        name="principal"
+                        min="0"
+                        step="0.01"
+                        placeholder="Enter principal amount"
+                        required
+                    >
+                </div>
 
-        <br><br>
+                <br>
 
-        <label for="time">Time (Years):</label>
-        <input type="number" id="time">
+                <div>
+                    <label for="rate">Annual Interest Rate (%):</label>
+                    <input
+                        type="number"
+                        id="rate"
+                        name="rate"
+                        min="0"
+                        step="0.01"
+                        placeholder="Enter interest rate"
+                        required
+                    >
+                </div>
 
-        <br><br>
+                <br>
 
-        <button type="button" onclick="calculateInterest()">
-            Calculate Interest
-        </button>
+                <div>
+                    <label for="time">Time (Years):</label>
+                    <input
+                        type="number"
+                        id="time"
+                        name="time"
+                        min="0"
+                        step="0.01"
+                        placeholder="Enter time in years"
+                        required
+                    >
+                </div>
 
-        <h2>Results</h2>
+                <br>
 
-        <p id="interest"></p>
+                <button type="button" onclick="calculateInterest()">
+                    Calculate Interest
+                </button>
 
-        <p id="total"></p>
+            </form>
 
+            <section aria-labelledby="results-heading">
+
+                <h2 id="results-heading">Calculation Results</h2>
+
+                <p>
+                    <strong>Simple Interest:</strong>
+                    <span id="interest">0.00</span>
+                </p>
+
+                <p>
+                    <strong>Total Amount:</strong>
+                    <span id="total">0.00</span>
+                </p>
+
+            </section>
+
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Simple Interest Calculator. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
